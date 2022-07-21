@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryption Decryption Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>RSA Encryption/Decryption Tool</h1>
+    <table class="form_group">
+        <tr>
+            <th>
+                Decryption:
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <b>Primes</b>
+            </td>
+            <td>
+                <select name="prime_p" id="input_p" style="margin-right: 5px;" required>
+                    <option value="" selected>The prime 'p'</option>
+                    <option value="179">179</option>
+                    <option value="181">181</option>
+                    <option value="191">191</option>
+                    <option value="193">193</option>
+                </select>
+                <select name="prime_q" id="input_q" required>
+                    <option value="" selected>The prime 'q'</option>
+                    <option value="281">281</option>
+                    <option value="283">283</option>
+                    <option value="293">293</option>
+                    <option value="307">307</option>
+                </select>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <b>Exponent <i>e</i></b>
+            </td>
+            <td colspan="2">
+                <input type="text" id="input_e" required>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>This is the public encryption exponent <i><b>e</b></i>.</span></td>
+        </tr>
+        <tr>
+            <td>
+                <b>Ciphertext <i>c</i></b>
+            </td>
+            <td colspan="2">
+                <input type="text" id="ciphertext" rows="6" required>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>Click <strong><span
+                            style="color: rgb(255, 0, 0);font-size: 1rem;font-style: italic;">Compute</span></strong>
+                    to
+                    decrypt
+                    your
+                    ciphertext.</span></td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+            </td>
+            <td>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b><i>n</i></b>
+            </td>
+            <td colspan="2">
+                <input type="text" id="output_n" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>This is the public value <i><b>n = p ⋅ q </b></i>.</span></td>
+        </tr>
+        <tr>
+            <td>
+                <b><i>ϕ(n) </i></b>
+            </td>
+            <td colspan="2">
+                <input type="text" id="phi_n" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>This is the secret value <i><b>ϕ(n) = (p−1) ⋅ (q−1) </b></i>.</span></td>
+        </tr>
+        <tr>
+            <td>
+                <b>Exponent <i>d</i></b>
+            </td>
+            <td colspan="2">
+                <input type="text" id="output_d" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>This is the secret decryption exponent <i><b>d</b></i>.</span></td>
+        </tr>
+        <tr>
+            <td>
+                <b>Plaintext <i>m</i></b>
+            </td>
+            <td>
+                <input type="text" id="plaintext" rows="6" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>This is the plaintext <b><i>m = c<sup>d</sup> mod n </i></b>.</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="decrypt()" style="margin-right: 5px;">Compute</button>
+                <button><a href="./RSA_encryption.html">Encryption</a></button>
+            </td>
+        </tr>
+    </table>
+    <script src="decryption.js"></script>
+</body>
+
+</html>

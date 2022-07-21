@@ -1,0 +1,52 @@
+html{
+  width: 100%;
+  height: 100%;
+}
+*{
+  letter-spacing: 0.8px;
+}
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-bottom: 15px;
+  color: #222;
+  background: linear-gradient(rgba(214, 224, 216, 0.5), rgba(36, 37, 37, 0.849));
+  background-attachment: fixed;
+}
+.form_group{
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 0px 10px 1px rgba(50, 50, 50, 1);
+  background: linear-gradient(rgb(237, 245, 235), rgba(214, 202, 132, 0.671));
+}
+h1{
+  text-align: center;
+  font-size: 2rem;
+}
+th{
+  font-size: 1.5rem;
+}
+input {
+  width: 17rem;
+  resize: none;
+  height: 2em;
+}
+select, button{
+  height: 2em;
+  width: 8.4rem ;
+  font-weight: bolder;
+}
+input, select, button{
+  
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px 1px rgba(50, 50, 50, 1);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
